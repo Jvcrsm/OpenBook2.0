@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-item-background, var(--ion-background-color, red));
 }
 
 ion-menu.md ion-content {
@@ -11,6 +13,9 @@ ion-menu.md ion-content {
 
 ion-menu.md ion-list {
   padding: 20px 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #5260ff;
 }
 
 ion-menu.md ion-note {
@@ -54,11 +59,13 @@ ion-menu.md ion-item.selected {
 }
 
 ion-menu.md ion-item.selected ion-icon {
+  padding-left: 10%;
   color: var(--ion-color-primary);
+  color: rgb(13, 13, 143);
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: #ffffff;
 }
 
 ion-menu.md ion-item ion-label {
@@ -116,4 +123,42 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+ion-menu {
+  width: 20%;
+}
+
+ion-avatar {
+  margin: auto;
+}
+
+h2,
+h6 {
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  margin-bottom: 20%;
+  font-size: 12px;
+}
+
+h2,
+h6,
+h5,
+h3 {
+  font-family: "Inter", sans-serif;
+}
+#logo {
+  margin-top: 10%;
+}
+
+#menu-pic {
+  width: 130px;
+  height: 130px;
 }
