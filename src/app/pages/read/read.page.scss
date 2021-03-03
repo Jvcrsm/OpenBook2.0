@@ -1,0 +1,39 @@
+#book-img {
+  width: 25vh;
+  height: 25vh;
+  margin: 2vh;
+}
+
+#commu-button {
+  --border-radius: 0px 20px 20px 0px;
+}
+
+#pages-button {
+  --border-radius: 20px 0px 0px 20px;
+  color: rgb(70, 68, 68);
+}
+
+h1 {
+  padding-top: 5vh;
+  font-size: 3.5vh;
+}
+
+h5 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: rgb(119, 115, 115);
+}
+
+.page-commu-button {
+  margin: 0;
+}
+
+ion-button {
+  height: 4vh;
+  width: 15vh;
+  font-size: 1.3vh;
+}
+
+ion-item {
+  margin-top: 5vh;
+}
