@@ -17,6 +17,10 @@ const routes: Routes = [
   },  {
     path: 'read',
     loadChildren: () => import('./pages/read/read.module').then( m => m.ReadPageModule)
+  },
+  {
+    path: 'page',
+    loadChildren: () => import('./pages/page/page.module').then( m => m.PagePageModule)
   }
 
 
