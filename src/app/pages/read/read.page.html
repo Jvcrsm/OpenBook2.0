@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>read</ion-title>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="library"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Pages</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <img
+    src="../../../assets/slides/2.jpeg"
+    alt=""
+    id="book-img"
+    class="ion-float-left"
+  />
+  <h1>The Book of Wisdome</h1>
+  <h5>written by:Elsa Manaloto</h5>
+  <h5>elsamanaloto@gmail.com</h5>
+  <ion-item>
+    <ion-button class="page-commu-button" id="pages-button" color="clear">
+      Pages
+    </ion-button>
+    <ion-button class="page-commu-button" id="commu-button" color="secondary">
+      Community
+    </ion-button>
+  </ion-item>
 </ion-content>
