@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'page',
     loadChildren: () => import('./pages/page/page.module').then( m => m.PagePageModule)
+  },
+  {
+    path: 'community',
+    loadChildren: () => import('./pages/community/community.module').then( m => m.CommunityPageModule)
   }
 
 
