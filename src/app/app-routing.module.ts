@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'library',
     loadChildren: () => import('./pages/library/library.module').then( m => m.LibraryPageModule)
+  },  {
+    path: 'read',
+    loadChildren: () => import('./pages/read/read.module').then( m => m.ReadPageModule)
   }
+
 
 ];
 
