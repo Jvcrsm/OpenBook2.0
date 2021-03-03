@@ -59,6 +59,7 @@ ion-menu.md ion-item.selected {
 }
 
 ion-menu.md ion-item.selected ion-icon {
+  transition: 500ms all ease-in-out;
   padding-left: 10%;
   color: var(--ion-color-primary);
   color: rgb(13, 13, 143);
