@@ -1,0 +1,44 @@
+ion-badge {
+  border-radius: 10px;
+  width: 6vh;
+  margin: auto;
+}
+
+#genres,
+#search-bar {
+  width: 20%;
+}
+
+.book {
+  width: 20%;
+}
+
+.book-img {
+  height: 20vh;
+  object-fit: cover;
+  width: 100%;
+}
+.slide-card {
+  width: 100%;
+  height: 220px;
+
+  .slide-img {
+    object-fit: cover;
+    width: 100%;
+    transform: scale(1.1, 1.1) rotate(2deg);
+    transition: 600ms all ease-in-out;
+  }
+}
+.swiper-slide-active {
+  transform: scale(1.05, 1.05);
+
+  .slide-card {
+    .slide-img {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.swiper-slide {
+  transition: 400ms all ease-in-out;
+}
