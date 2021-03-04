@@ -4,13 +4,24 @@
   margin: 2vh;
 }
 
+#comments {
+  width: 83vh;
+}
+
 #commu-button {
   --border-radius: 0px 20px 20px 0px;
   color: rgb(70, 68, 68);
 }
 
+#pages {
+  width: 60vh;
+}
 #pages-button {
   --border-radius: 20px 0px 0px 20px;
+}
+
+#page-date-added {
+  font-size: 1.5vh;
 }
 
 h1 {
@@ -18,10 +29,26 @@ h1 {
   font-size: 3.5vh;
 }
 
+h3 {
+  color: #3dc2ff;
+  font-weight: bold;
+}
+
 h5 {
   margin-top: 2px;
   margin-bottom: 2px;
   color: rgb(119, 115, 115);
+}
+
+.comment-item {
+  margin-top: 0;
+}
+
+.page-card {
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  margin-bottom: 0.5vh;
 }
 
 .page-commu-button {
@@ -34,6 +61,14 @@ ion-button {
   font-size: 1.3vh;
 }
 
+ion-card {
+  margin-left: 5vh;
+}
+
 ion-item {
   margin-top: 5vh;
+}
+
+ion-avatar {
+  margin: auto;
 }
