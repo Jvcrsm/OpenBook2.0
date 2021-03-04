@@ -32,4 +32,125 @@
       Community
     </ion-button>
   </ion-item>
+
+  <br />
+  <br />
+
+  <ion-card class="ion-float-left" id="pages">
+    <ion-card
+      routerLink="/page"
+      routerDirection="root"
+      color="tertiary"
+      class="page-card"
+    >
+      <h4>
+        1 The Lamb Sauce
+        <ion-badge color="warning" mode="ios" class="ion-float-right"
+          ><ion-icon name="star-outline"></ion-icon>42</ion-badge
+        >
+        <ion-badge color="success" mode="ios" class="ion-float-right"
+          ><ion-icon name="eye-outline"></ion-icon>42</ion-badge
+        >
+        <ion-label class="ion-float-right" id="page-date-added"
+          >March 20, 1978</ion-label
+        >
+      </h4>
+    </ion-card>
+
+    <ion-card color="tertiary" class="page-card">
+      <h4>
+        2 Fuqin Donkey
+        <ion-badge color="warning" mode="ios" class="ion-float-right"
+          ><ion-icon name="star-outline"></ion-icon>42</ion-badge
+        >
+        <ion-badge color="success" mode="ios" class="ion-float-right"
+          ><ion-icon name="eye-outline"></ion-icon>42</ion-badge
+        >
+        <ion-label class="ion-float-right" id="page-date-added"
+          >March 20, 1978</ion-label
+        >
+      </h4>
+    </ion-card>
+
+    <ion-card color="tertiary" class="page-card">
+      <h4>
+        3 What are you? an Idiot Sandwitch
+        <ion-badge color="warning" mode="ios" class="ion-float-right"
+          ><ion-icon name="star-outline"></ion-icon>42</ion-badge
+        >
+        <ion-badge color="success" mode="ios" class="ion-float-right"
+          ><ion-icon name="eye-outline"></ion-icon>42</ion-badge
+        >
+        <ion-label class="ion-float-right" id="page-date-added"
+          >March 20, 1978</ion-label
+        >
+      </h4>
+    </ion-card>
+  </ion-card>
+
+  <ion-card class="ion-float-left" id="comments">
+    <ion-card-header>
+      <ion-card-title
+        >Notes<ion-icon name="chatbox-ellipses-outline"></ion-icon
+      ></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="comment-item">
+        <ion-badge color="warning" slot="end" mode="ios"
+          ><ion-icon name="star-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="success" slot="end" mode="ios"
+          ><ion-icon name="eye-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="primary" slot="end" mode="ios"
+          ><ion-icon name="pencil-outline"></ion-icon>11k</ion-badge
+        >
+      </ion-item>
+      <ion-item class="comment-item">
+        <ion-badge slot="start" color="none"
+          ><ion-avatar>
+            <img src="../../../assets/slides/4.jpeg" />
+          </ion-avatar>
+          <h3>Tommy Jhonnes</h3></ion-badge
+        >
+        <ion-text
+          >Nice one pepito my friend,Nice one pepito my friend, Nice one pepito
+          my friend,Nice one pepito my friend, may pera kaba dyan?</ion-text
+        >
+      </ion-item>
+      <ion-item class="comment-item">
+        <ion-badge slot="start" color="none"
+          ><ion-avatar>
+            <img src="../../../assets/slides/4.jpeg" />
+          </ion-avatar>
+          <h3>Tommy Jhonnes</h3></ion-badge
+        >
+        <ion-text
+          >Nice one pepito my friend,Nice one pepito my friend, Nice one pepito
+          my friend,Nice one pepito my friend, may pera kaba dyan?</ion-text
+        >
+      </ion-item>
+      <ion-item class="comment-item">
+        <ion-badge slot="start" color="none"
+          ><ion-avatar>
+            <img src="../../../assets/slides/4.jpeg" />
+          </ion-avatar>
+          <h3>Tommy Jhonnes</h3></ion-badge
+        >
+        <ion-text
+          >Nice one pepito my friend,Nice one pepito my friend, Nice one pepito
+          my friend,Nice one pepito my friend, may pera kaba dyan?</ion-text
+        >
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Add Note</ion-label>
+        <ion-input></ion-input>
+        <ion-button slot="end" color="secondary">
+          Post <ion-icon name="paper-plane-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
