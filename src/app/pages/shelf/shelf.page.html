@@ -1,0 +1,210 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">shelf</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    showCancelButton="focus"
+    id="search-bar"
+    class="ion-float-left"
+  ></ion-searchbar>
+
+  <ion-item id="genres" class="ion-float-right">
+    <ion-label>Genre</ion-label>
+    <ion-select
+      [interfaceOptions]="customAlertOptions"
+      interface="alert"
+      multiple="true"
+      placeholder="Select One"
+    >
+      <ion-select-option value="bacon">Fiction</ion-select-option>
+      <ion-select-option value="olives">Narrative</ion-select-option>
+      <ion-select-option value="xcheese">Novel</ion-select-option>
+      <ion-select-option value="peppers">Poetry</ion-select-option>
+      <ion-select-option value="mushrooms">Mystery</ion-select-option>
+      <ion-select-option value="onions">Thriller</ion-select-option>
+      <ion-select-option value="pepperoni">Science Fiction</ion-select-option>
+      <ion-select-option value="pineapple">Fantasy</ion-select-option>
+      <ion-select-option value="sausage">Article</ion-select-option>
+      <ion-select-option value="Spinach">Drama</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item></ion-item>
+
+  <ion-card class="ion-float-left book">
+    <img src="../../../assets/slides/1.jpeg" class="book-img" />
+    <ion-card-header>
+      <ion-card-subtitle>written by:Elsa Manaloto</ion-card-subtitle>
+      <ion-card-title>The Book of Wisdom</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-justify">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+      Madison was named the capital of the Wisconsin Territory in 1836. Founded
+      in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was
+      named the capital of the Wisconsin Territory in 1836.
+
+      <ion-button
+        routerLink="/read"
+        routerDirection="root"
+        expand="block"
+        shape="round"
+        color="success"
+      >
+        Read More
+      </ion-button>
+
+      <ion-item>
+        <ion-badge color="warning"
+          ><ion-icon name="star-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="success"
+          ><ion-icon name="eye-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="primary"
+          ><ion-icon name="pencil-outline"></ion-icon>11k</ion-badge
+        >
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-float-left book">
+    <img src="../../../assets/slides/2.jpeg" class="book-img" />
+    <ion-card-header>
+      <ion-card-subtitle>written by:Elsa Manaloto</ion-card-subtitle>
+      <ion-card-title>The Book of Wisdom</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-justify">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+      Madison was named the capital of the Wisconsin Territory in 1836. Founded
+      in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was
+      named the capital of the Wisconsin Territory in 1836.
+
+      <ion-button
+        (click)="onClick()"
+        expand="block"
+        shape="round"
+        color="success"
+      >
+        Read More
+      </ion-button>
+
+      <ion-item>
+        <ion-badge color="warning"
+          ><ion-icon name="star-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="success"
+          ><ion-icon name="eye-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="primary"
+          ><ion-icon name="pencil-outline"></ion-icon>11k</ion-badge
+        >
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-float-left book">
+    <img src="../../../assets/slides/3.jpeg" class="book-img" />
+    <ion-card-header>
+      <ion-card-subtitle>written by:Elsa Manaloto</ion-card-subtitle>
+      <ion-card-title>The Book of Wisdom</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-justify">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+      Madison was named the capital of the Wisconsin Territory in 1836. Founded
+      in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was
+      named the capital of the Wisconsin Territory in 1836.
+
+      <ion-button
+        (click)="onClick()"
+        expand="block"
+        shape="round"
+        color="success"
+      >
+        Read More
+      </ion-button>
+
+      <ion-item>
+        <ion-badge color="warning"
+          ><ion-icon name="star-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="success"
+          ><ion-icon name="eye-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="primary"
+          ><ion-icon name="pencil-outline"></ion-icon>11k</ion-badge
+        >
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-float-left book">
+    <img src="../../../assets/slides/4.jpeg" class="book-img" />
+    <ion-card-header>
+      <ion-card-subtitle>written by:Elsa Manaloto</ion-card-subtitle>
+      <ion-card-title>The Book of Wisdom</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-justify">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+      Madison was named the capital of the Wisconsin Territory in 1836. Founded
+      in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was
+      named the capital of the Wisconsin Territory in 1836.
+
+      <ion-button expand="block" shape="round" color="success">
+        Read More
+      </ion-button>
+
+      <ion-item>
+        <ion-badge color="warning"
+          ><ion-icon name="star-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="success"
+          ><ion-icon name="eye-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="primary"
+          ><ion-icon name="pencil-outline"></ion-icon>11k</ion-badge
+        >
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-float-left book">
+    <img src="../../../assets/slides/5.jpeg" class="book-img" />
+    <ion-card-header>
+      <ion-card-subtitle>written by:Elsa Manaloto</ion-card-subtitle>
+      <ion-card-title>The Book of Wisdom</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-justify">
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+      Madison was named the capital of the Wisconsin Territory in 1836. Founded
+      in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was
+      named the capital of the Wisconsin Territory in 1836.
+
+      <ion-button
+        (click)="onClick()"
+        expand="block"
+        shape="round"
+        color="success"
+      >
+        Read More
+      </ion-button>
+
+      <ion-item>
+        <ion-badge color="warning"
+          ><ion-icon name="star-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="success"
+          ><ion-icon name="eye-outline"></ion-icon>11k</ion-badge
+        >
+        <ion-badge color="primary"
+          ><ion-icon name="pencil-outline"></ion-icon>11k</ion-badge
+        >
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
