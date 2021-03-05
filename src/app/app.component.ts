@@ -8,7 +8,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Library', url: '/library', icon: 'book' },
     { title: 'Followed', url: '/Outbox', icon: 'heart-circle' },
-    { title: 'Book Shelf', url: '/folder/Favorites', icon: 'layers' },
+    { title: 'Book Shelf', url: '/shelf', icon: 'layers' },
     { title: 'My Books', url: '/folder/Archived', icon: 'archive' },
     { title: 'Letters', url: '/folder/Trash', icon: 'document' },
     { title: 'Diary', url: '/folder/Trash', icon: 'reader' },
