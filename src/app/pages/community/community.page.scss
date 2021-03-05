@@ -13,6 +13,11 @@
   color: rgb(70, 68, 68);
 }
 
+.post-pic {
+  width: 40vh;
+  height: 40vh;
+  margin: auto;
+}
 h1 {
   padding-top: 5vh;
   font-size: 3.5vh;
@@ -28,12 +33,31 @@ h5 {
   margin: 0;
 }
 
+.post-conetent {
+  margin-top: 0;
+}
+
+.post-poll {
+  width: 50vh;
+  margin: auto;
+}
+
 ion-button {
   height: 4vh;
   width: 15vh;
   font-size: 1.3vh;
 }
 
+ion-card {
+  margin: auto;
+  margin-top: 2vh;
+  width: 100vh;
+}
+
 ion-item {
   margin-top: 5vh;
+}
+
+ion-thumbnail {
+  --border-radius: 50px;
 }
