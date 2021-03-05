@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'community',
     loadChildren: () => import('./pages/community/community.module').then( m => m.CommunityPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   }
 
 
