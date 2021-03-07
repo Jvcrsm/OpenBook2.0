@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'page-content',
     loadChildren: () => import('./pages/page-content/page-content.module').then( m => m.PageContentPageModule)
+  },
+  {
+    path: 'letters',
+    loadChildren: () => import('./pages/letters/letters.module').then( m => m.LettersPageModule)
   }
 
 
