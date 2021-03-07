@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'summary',
     loadChildren: () => import('./pages/summary/summary.module').then( m => m.SummaryPageModule)
+  },
+  {
+    path: 'page-content',
+    loadChildren: () => import('./pages/page-content/page-content.module').then( m => m.PageContentPageModule)
   }
 
 
