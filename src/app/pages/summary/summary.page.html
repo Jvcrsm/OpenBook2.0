@@ -1,9 +1,60 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>summary</ion-title>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="my-book"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Summary</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card class="content-card ion-float-left ion-text-center"
+      ><ion-label>Thumbnail</ion-label
+      ><img src="../../../assets/slides/4.jpeg" alt="" id="summary-img" />
+      <ion-button expand="block" fill="clear"
+        ><ion-icon name="image-outline"></ion-icon> ADD IMAGE
+      </ion-button></ion-card
+    ><ion-card class="content-card ion-float-left" id="summary-content"
+      ><ion-item class="genre-item ion-float-left">
+        <ion-label position="floating" color="primary">Genre</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="brown">Horror</ion-select-option>
+          <ion-select-option value="blonde">Comedy</ion-select-option>
+          <ion-select-option value="black">Intense</ion-select-option>
+          <ion-select-option value="red">BUllcrap</ion-select-option>
+        </ion-select>
+      </ion-item>
 
+      <ion-item class="genre-item ion-float-left">
+        <ion-label position="floating" color="primary">Sub-genre</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="brown">Horror</ion-select-option>
+          <ion-select-option value="blonde">Comedy</ion-select-option>
+          <ion-select-option value="black">Intense</ion-select-option>
+          <ion-select-option value="red">BUllcrap</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="ion-float-left">
+        <ion-label position="floating" color="primary">Title</ion-label>
+        <ion-input placeholder="Title Here"></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-float-left">
+        <ion-label position="floating" color="primary">Summary</ion-label>
+        <ion-textarea
+          rows="8"
+          cols="70"
+          placeholder="Summary here"
+        ></ion-textarea>
+      </ion-item>
+      <ion-item class="ion-float-right">
+        <ion-button>
+          NEXT
+          <ion-icon name="arrow-forward-outline"></ion-icon
+        ></ion-button>
+      </ion-item> </ion-card
+  ></ion-card>
 </ion-content>
