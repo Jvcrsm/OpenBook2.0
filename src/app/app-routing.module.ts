@@ -33,6 +33,14 @@ const routes: Routes = [
   {
     path: 'shelf',
     loadChildren: () => import('./pages/shelf/shelf.module').then( m => m.ShelfPageModule)
+  },
+  {
+    path: 'my-book',
+    loadChildren: () => import('./pages/my-book/my-book.module').then( m => m.MyBookPageModule)
+  },
+  {
+    path: 'summary',
+    loadChildren: () => import('./pages/summary/summary.module').then( m => m.SummaryPageModule)
   }
 
 
