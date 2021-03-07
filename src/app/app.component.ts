@@ -10,7 +10,7 @@ export class AppComponent {
     { title: 'Book Shelf', url: '/shelf', icon: 'layers' },
     { title: 'My Books', url: '/my-book', icon: 'archive' },
     { title: 'Letters', url: '/letters', icon: 'document' },
-    { title: 'Diary', url: '/folder/Trash', icon: 'reader' },
+    { title: 'Diary', url: '/diary', icon: 'reader' },
     { title: 'Leave', url: '/folder/Spam', icon: 'log-out' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
