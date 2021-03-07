@@ -9,7 +9,7 @@ export class AppComponent {
     { title: 'Library', url: '/library', icon: 'book' },
     { title: 'Followed', url: '/Outbox', icon: 'heart-circle' },
     { title: 'Book Shelf', url: '/shelf', icon: 'layers' },
-    { title: 'My Books', url: '/folder/Archived', icon: 'archive' },
+    { title: 'My Books', url: '/my-book', icon: 'archive' },
     { title: 'Letters', url: '/folder/Trash', icon: 'document' },
     { title: 'Diary', url: '/folder/Trash', icon: 'reader' },
     { title: 'Leave', url: '/folder/Spam', icon: 'log-out' },
