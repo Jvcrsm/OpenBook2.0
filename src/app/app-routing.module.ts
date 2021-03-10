@@ -53,6 +53,10 @@ const routes: Routes = [
   {
     path: 'diary',
     loadChildren: () => import('./pages/diary/diary.module').then( m => m.DiaryPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   }
 
 
