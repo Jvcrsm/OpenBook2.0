@@ -1,0 +1,53 @@
+ion-checkbox {
+  margin-left: 4%;
+}
+ion-icon {
+  margin-right: 5%;
+}
+
+img {
+  margin-left: 5%;
+}
+
+h6 {
+  margin-top: 0;
+}
+
+.form-item {
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+#content-card {
+  height: 70%;
+  width: 60%;
+  margin: auto;
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d3cce3,
+    #e9e4f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d3cce3,
+    #e9e4f0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#logo {
+  width: 15vh;
+}
+
+#login-content {
+  margin-top: 10%;
+  width: 46%;
+}
+
+#login-img {
+  padding-top: 12%;
+}
+
+#login-pic {
+  width: 50%;
+  margin-top: 5%;
+}
