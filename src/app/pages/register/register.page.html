@@ -1,0 +1,79 @@
+<ion-header> </ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+    <img src="../../../assets/logo.png" alt="" id="logo" />
+  </ion-item>
+  <ion-card id="content-card"
+    ><ion-card id="login-pic" class="ion-float-left">
+      <img src="../../../assets/reading.svg" alt="" id="login-img" />
+
+      <h2 class="ion-text-center">Login</h2>
+    </ion-card>
+
+    <ion-card id="login-content" class="ion-float-left">
+      <ion-item>
+        <ion-item class="form-item fname-lname">
+          <ion-label position="floating" color="primary">First Name</ion-label>
+          <ion-input type="text" placeholder="Firs Name"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-item fname-lname">
+          <ion-label position="floating" color="primary">Last Name</ion-label>
+          <ion-input type="text" placeholder="Last Name"></ion-input>
+        </ion-item>
+      </ion-item>
+
+      <ion-item>
+        <ion-list>
+          <ion-radio-group value="biff">
+            <ion-list-header>
+              <ion-label>Gender</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label>Male</ion-label>
+              <ion-radio slot="start" value="biff"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Female</ion-label>
+              <ion-radio slot="start" value="griff"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-datetime
+          displayFormat="MM DD YY"
+          placeholder="Select Date"
+        ></ion-datetime>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="floating" color="primary">Address</ion-label>
+        <ion-input type="text" placeholder="Address"></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="text" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="text" placeholder="Confirm Password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="tertiary"> Register </ion-button>
+      <h5 class="ion-text-center">or</h5>
+      <ion-button expand="block" fill="clear"> Login </ion-button>
+    </ion-card>
+  </ion-card>
+</ion-content>
