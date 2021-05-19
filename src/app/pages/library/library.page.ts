@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-library',
@@ -17,9 +18,10 @@ export class LibraryPage implements OnInit {
 
   books: any = [1,2,3,4,5,1,2,3,4,5,1,2,3,1,1,1,1,1,1,1,1,1,1,1]
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
+    this.menu.enable(true);
   }
 
   

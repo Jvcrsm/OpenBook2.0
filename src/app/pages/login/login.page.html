@@ -12,16 +12,26 @@
     </ion-card>
     <ion-card id="login-content" class="ion-float-left ion-padding">
       <ion-item class="form-item">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-input type="text" placeholder="Username"></ion-input>
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Email"
+          [(ngModel)]="credentials.email"
+        ></ion-input>
       </ion-item>
 
       <ion-item class="form-item">
         <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="text" placeholder="Password"></ion-input>
+        <ion-input
+          type="text"
+          placeholder="Password"
+          [(ngModel)]="credentials.password"
+        ></ion-input>
       </ion-item>
 
-      <ion-button expand="block" color="dark"> Login </ion-button>
+      <ion-button expand="block" color="dark" (click)="login()">
+        Login
+      </ion-button>
       <h5 class="ion-text-center">or</h5>
       <ion-button
         expand="block"
