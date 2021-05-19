@@ -10,7 +10,7 @@
 
       <h2 class="ion-text-center">Login</h2>
     </ion-card>
-    <ion-card id="login-content" class="ion-float-left">
+    <ion-card id="login-content" class="ion-float-left ion-padding">
       <ion-item class="form-item">
         <ion-icon name="person-circle-outline"></ion-icon>
         <ion-input type="text" placeholder="Username"></ion-input>
@@ -21,12 +21,16 @@
         <ion-input type="text" placeholder="Password"></ion-input>
       </ion-item>
 
-      <ion-checkbox></ion-checkbox
-      ><ion-label color="primary">Remember me</ion-label>
-
-      <ion-button expand="block" color="tertiary"> Login </ion-button>
+      <ion-button expand="block" color="dark"> Login </ion-button>
       <h5 class="ion-text-center">or</h5>
-      <ion-button expand="block" fill="clear"> Register </ion-button>
+      <ion-button
+        expand="block"
+        color="success"
+        [routerLink]="['/register']"
+        routerLinkActive="router-link-active"
+      >
+        Register
+      </ion-button>
       <ion-item class="ion-float-right">
         <h6>Forgot password?</h6>
       </ion-item>

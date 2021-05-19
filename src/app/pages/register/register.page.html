@@ -24,7 +24,7 @@
         </ion-item>
       </ion-item>
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-list>
           <ion-radio-group value="biff">
             <ion-list-header>
@@ -42,24 +42,24 @@
             </ion-item>
           </ion-radio-group>
         </ion-list>
-      </ion-item>
+      </ion-item> -->
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>Birthday</ion-label>
         <ion-datetime
           displayFormat="MM DD YY"
           placeholder="Select Date"
         ></ion-datetime>
-      </ion-item>
-
+      </ion-item> -->
+      <!-- 
       <ion-item class="form-item">
         <ion-label position="floating" color="primary">Address</ion-label>
         <ion-input type="text" placeholder="Address"></ion-input>
-      </ion-item>
+      </ion-item> -->
 
       <ion-item class="form-item">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-input type="text" placeholder="Username"></ion-input>
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input type="text" placeholder="Email"></ion-input>
       </ion-item>
 
       <ion-item class="form-item">
@@ -71,9 +71,16 @@
         <ion-input type="text" placeholder="Confirm Password"></ion-input>
       </ion-item>
 
-      <ion-button expand="block" color="tertiary"> Register </ion-button>
+      <ion-button expand="block" color="dark"> Register </ion-button>
       <h5 class="ion-text-center">or</h5>
-      <ion-button expand="block" fill="clear"> Login </ion-button>
+      <ion-button
+        expand="block"
+        color="success"
+        [routerLink]="['/login']"
+        routerLinkActive="router-link-active"
+      >
+        Login
+      </ion-button>
     </ion-card>
   </ion-card>
 </ion-content>
