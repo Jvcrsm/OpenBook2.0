@@ -33,3 +33,39 @@ ion-badge {
   width: 6vh;
   margin: auto;
 }
+
+.book-cover {
+  height: 40%;
+  width: 40%;
+  border-radius: 12px;
+  margin-top: 1em;
+  margin-left: 6%;
+
+  box-shadow: 0 0 0 0 rgb(0, 47, 255);
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(10, 19, 153, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+ion-badge {
+  border-radius: 1em;
+  width: 50%;
+  --background: rgba(175, 184, 189, 0.678);
+  --color: rgba(47, 48, 51, 0.897);
+}
