@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       <ion-back-button defaultHref="library"></ion-back-button>
@@ -15,9 +15,9 @@
     id="book-img"
     class="ion-float-left"
   />
-  <h1>The Book of Wisdome</h1>
-  <h5>written by:Elsa Manaloto</h5>
-  <h5>elsamanaloto@gmail.com</h5>
+  <h1>{{title}}</h1>
+  <h5>written by: {{by}}</h5>
+  <h5>sampleEmail@gmail.com</h5>
   <ion-item lines="none"
     ><ion-icon name="archive-outline"></ion-icon>
     <h5>Add to Shelf</h5>
@@ -44,19 +44,19 @@
       <ion-input></ion-input>
     </ion-item>
     <ion-item class="post-conetent">
-      <ion-button color="light">
+      <!-- <ion-button color="light">
         <ion-icon name="image-outline"></ion-icon> + Image
       </ion-button>
       <ion-button color="light">
         <ion-icon name="ellipsis-vertical-outline"></ion-icon> + Poll
-      </ion-button>
-      <ion-button slot="end" color="secondary">
+      </ion-button> -->
+      <ion-button slot="end" color="dark">
         Post <ion-icon name="paper-plane-outline"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-card>
 
-  <ion-card
+  <ion-card *ngFor="let post of posts"
     ><ion-item class="post-conetent">
       <ion-thumbnail slot="start">
         <img src="../../../assets/slides/2.jpeg" />
@@ -64,17 +64,12 @@
       <ion-label>Elsa Manaloto</ion-label>
     </ion-item>
     <ion-item class="post-conetent">
-      <h6 class="ion-text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-        optio, quis eius dolorem earum vero exercitationem ab debitis ducimus
-        dolore ea, consectetur aliquam! Beatae voluptatum, in molestiae ea
-        consectetur deserunt?
-      </h6>
+      <h6 class="ion-text-justify">{{post.content}}</h6>
     </ion-item>
     <h6 class="ion-float-right">March 2, 2069</h6>
   </ion-card>
 
-  <ion-card>
+  <!-- <ion-card>
     <ion-item class="post-conetent">
       <ion-thumbnail slot="start">
         <img src="../../../assets/slides/2.jpeg" />
@@ -125,5 +120,5 @@
     </ion-item>
 
     <h6 class="ion-float-right">March 2, 2069</h6>
-  </ion-card>
+  </ion-card> -->
 </ion-content>

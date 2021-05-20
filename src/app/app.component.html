@@ -11,15 +11,15 @@
 ></script>
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay" color="tertiary">
-      <ion-content color="tertiary">
+    <ion-menu contentId="main-content" type="overlay" color="dark">
+      <ion-content color="dark">
         <ion-list id="inbox-list">
           <ion-item color="none" lines="none">
             <ion-icon name="settings-outline"></ion-icon>
           </ion-item>
 
           <ion-avatar id="menu-pic">
-            <img src="../assets/pic.jpg" />
+            <img src="../assets/Avatar/2.png" />
           </ion-avatar>
 
           <h2 class="ion-text-center">Pepito Manaloto</h2>
@@ -35,7 +35,7 @@
               lines="none"
               detail="false"
               routerLinkActive="selected"
-              color="tertiary"
+              color="dark"
             >
               <ion-icon slot="start" [md]="p.icon + '-sharp'"></ion-icon>
               <h5>{{ p.title }}</h5>
@@ -46,7 +46,6 @@
         <ion-avatar id="logo">
           <img src="../assets/logo.png" id="logo-pic" />
         </ion-avatar>
-        <h3 class="ion-text-center">OpenBook</h3>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
