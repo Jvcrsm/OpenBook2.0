@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { ReportPage } from 'src/app/modals/report/report.page';
 import { ApiService } from 'src/app/services/api.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
@@ -66,6 +67,22 @@ export class ReadPage implements OnInit {
   this.apiService.makeRequest(requestObject).then((data) => {
     this.chapters = data.user.chapters
   });
+  }
+
+  async presentReport() {
+    const modal = await this.modalController.create({
+      component: ReportPage,
+      cssClass: 'my-custom-class'
+    });
+    
+    await modal.present();
+
+    const { data } = await modal.onWillDismiss();
+    if(this.storage.didPost){
+      this.chapters.push(data);
+      this.storage.didPost = false;
+    }
+    
   }
 
   // public createChapter(){

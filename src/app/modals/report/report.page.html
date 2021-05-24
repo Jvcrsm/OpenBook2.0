@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">REPORT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h4>Title: {{bookTitle}}</h4>
+
+  <ion-item>
+    <ion-label>Type</ion-label>
+    <ion-select
+      multiple="true"
+      [value]="['Sexual Content', 'Repulsive content', 'Hateful or abusive content', 'Harmful or dangerous acts', 'Child abuse', 'Promotes terrorism', 'Infringes my rights', 'Captions issue']"
+      [(ngModel)]="type"
+    >
+      <ion-select-option isChecked="false" value="Sexual Content"
+        >Sexual Content</ion-select-option
+      >
+      <ion-select-option value="Repulsive content"
+        >Repulsive content</ion-select-option
+      >
+      <ion-select-option value="Hateful or abusive content"
+        >Hateful or abusive content</ion-select-option
+      >
+      <ion-select-option value="Harmful or dangerous acts"
+        >Harmful or dangerous acts</ion-select-option
+      >
+      <ion-select-option value="Child abuse">Child abuse</ion-select-option>
+      <ion-select-option value="Promotes terrorism"
+        >Promotes terrorism</ion-select-option
+      >
+      <ion-select-option value="Infringes my rights"
+        >Infringes my rights</ion-select-option
+      >
+      <ion-select-option value="Captions issue"
+        >Captions issue</ion-select-option
+      >
+    </ion-select>
+  </ion-item>
+
+  <ion-item class="ion-float-left">
+    <ion-label position="floating" color="primary">More Info</ion-label>
+    <ion-textarea
+      rows="5"
+      cols="70"
+      placeholder="Summary here"
+      [(ngModel)]="info"
+    ></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" color="danger" shape="round" (click)="report()">
+    Report
+  </ion-button>
+</ion-content>
