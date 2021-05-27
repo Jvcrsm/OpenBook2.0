@@ -11,6 +11,8 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class MyBookPage implements OnInit {
 
+  verified:string = "false";
+  userData:any;
   userId: any;
   books = [{
     _id: '1',
@@ -22,6 +24,8 @@ export class MyBookPage implements OnInit {
   constructor(private modalController: ModalController, private storage: LocalStorageService, private apiService: ApiService, private router: Router) { 
     this.userId = this.storage.userId;
     this.storage.canPost = true;
+    this.userData = this.storage.userData;
+    this.verified = this.userData.verified;
   }
 
   ngOnInit() {

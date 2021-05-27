@@ -1,51 +1,51 @@
-<ion-header>
-  <ion-toolbar color="success">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title class="ion-text-center">My Books</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header> </ion-header>
 
 <ion-content>
-  <ion-item lines="none">
-    <ion-button
-      color="secondary"
-      shape="round"
-      id="add-button"
-      routerLink="/summary"
-      routerDirection="root"
+  <div *ngIf="verified == 'true'">
+    <ion-item lines="none">
+      <ion-button
+        color="secondary"
+        shape="round"
+        id="add-button"
+        routerLink="/summary"
+        routerDirection="root"
+      >
+        <ion-icon name="add-circle-outline"></ion-icon>ADD
+      </ion-button>
+    </ion-item>
+
+    <ion-card
+      class="book-cover ion-float-left book-cover"
+      *ngFor="let book of books"
     >
-      <ion-icon name="add-circle-outline"></ion-icon>ADD
-    </ion-button>
-  </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img
+              id="book-cover"
+              src="https://images.unsplash.com/photo-1579572331145-5e53b299c64e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            />
+          </ion-col>
+          <ion-col size="7">
+            <ion-item class="ion-text-center">
+              <ion-label>{{book.title }}</ion-label>
+            </ion-item>
 
-  <ion-card
-    class="book-cover ion-float-left book-cover"
-    *ngFor="let book of books"
-  >
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <img
-            id="book-cover"
-            src="https://images.unsplash.com/photo-1579572331145-5e53b299c64e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-          />
-        </ion-col>
-        <ion-col size="7">
-          <ion-item class="ion-text-center">
-            <ion-label>{{book.title }}</ion-label>
-          </ion-item>
+            <ion-card-content
+              >{{book.summary}}
+              <ion-button expand="block" shape="round" color="dark">
+                Read
+              </ion-button>
+              <ion-badge *ngFor="let genre of book.genre">{{genre}}</ion-badge>
+            </ion-card-content>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
 
-          <ion-card-content
-            >{{book.summary}}
-            <ion-button expand="block" shape="round" color="dark">
-              Read
-            </ion-button>
-            <ion-badge *ngFor="let genre of book.genre">{{genre}}</ion-badge>
-          </ion-card-content>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+  <div *ngIf="verified == 'false'">
+    <h1 class="lock-text ion-text-center">ACCOUNT NOT VERIFIED</h1>
+    <img src="../../../assets/verified.svg" alt="" class="lock-img" />
+  </div>
 </ion-content>
