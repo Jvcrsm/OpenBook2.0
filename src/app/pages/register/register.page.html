@@ -1,86 +1,123 @@
 <ion-header> </ion-header>
 
 <ion-content>
-  <ion-item lines="none">
-    <img src="../../../assets/logo.png" alt="" id="logo" />
-  </ion-item>
   <ion-card id="content-card"
     ><ion-card id="login-pic" class="ion-float-left">
-      <img src="../../../assets/reading.svg" alt="" id="login-img" />
-
-      <h2 class="ion-text-center">REGISTER</h2>
-    </ion-card>
-
-    <ion-card id="login-content" class="ion-float-left">
-      <ion-item>
-        <ion-item class="form-item fname-lname">
-          <ion-label position="floating" color="primary">First Name</ion-label>
-          <ion-input type="text" placeholder="Firs Name"></ion-input>
-        </ion-item>
-
-        <ion-item class="form-item fname-lname">
-          <ion-label position="floating" color="primary">Last Name</ion-label>
-          <ion-input type="text" placeholder="Last Name"></ion-input>
-        </ion-item>
-      </ion-item>
-
-      <!-- <ion-item>
-        <ion-list>
-          <ion-radio-group value="biff">
-            <ion-list-header>
-              <ion-label>Gender</ion-label>
-            </ion-list-header>
-
-            <ion-item>
-              <ion-label>Male</ion-label>
-              <ion-radio slot="start" value="biff"></ion-radio>
-            </ion-item>
-
-            <ion-item>
-              <ion-label>Female</ion-label>
-              <ion-radio slot="start" value="griff"></ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </ion-list>
-      </ion-item> -->
-
-      <!-- <ion-item>
-        <ion-label>Birthday</ion-label>
-        <ion-datetime
-          displayFormat="MM DD YY"
-          placeholder="Select Date"
-        ></ion-datetime>
-      </ion-item> -->
-      <!-- 
-      <ion-item class="form-item">
-        <ion-label position="floating" color="primary">Address</ion-label>
-        <ion-input type="text" placeholder="Address"></ion-input>
-      </ion-item> -->
-
-      <ion-item class="form-item">
-        <ion-icon name="mail-outline"></ion-icon>
-        <ion-input type="text" placeholder="Email"></ion-input>
-      </ion-item>
-
-      <ion-item class="form-item">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="text" placeholder="Password"></ion-input>
-      </ion-item>
-      <ion-item class="form-item">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="text" placeholder="Confirm Password"></ion-input>
-      </ion-item>
-
-      <ion-button expand="block" color="dark"> Register </ion-button>
-      <h5 class="ion-text-center">or</h5>
-      <ion-button
-        expand="block"
-        color="success"
-        [routerLink]="['/login']"
-        routerLinkActive="router-link-active"
+      <h1
+        style="
+          font-size: 70px;
+          color: #f4976c;
+          margin-left: 10px;
+          padding-top: 100px;
+          font-family: sans-serif;
+          padding-left: 20px;
+        "
       >
-        Login
-      </ion-button>
+        Welcome !
+      </h1>
+      <p
+        style="
+          font-size: 20px;
+          color: #f4976c;
+          font-family: sans-serif;
+          padding-left: 40px;
+        "
+      >
+        A good place to be stranded.
+      </p>
+      <img src="../../../assets/reading.svg" alt="" id="login-img" />
+      <br />
+      <br />
+      <br />
+    </ion-card>
+    <ion-card id="login-content" class="ion-float-left">
+      <ion-card-content>
+        <ion-item lines="none">
+          <img src="../../../assets/logo.png" alt="" id="logo" />
+          <strong>Openbook</strong>
+        </ion-item>
+        <div class="right">
+          <form>
+            <section class="copy">
+              <h2 Sign up></h2>
+              <div class="login-container">
+                <strong>Sign up</strong>
+              </div>
+            </section>
+            <div class="input-container email">
+              <strong> <label>First Name</label></strong>
+              <input
+                placeholder="Your first name here"
+                type="text"
+                id="name"
+                name="sample"
+                [(ngModel)]="credentials.first_name"
+              />
+            </div>
+            <div class="input-container email">
+              <strong> <label>Last Name</label></strong>
+              <input
+                placeholder="Your last name here"
+                type="text"
+                id="name"
+                name="sample"
+                [(ngModel)]="credentials.last_name"
+              />
+            </div>
+            <div class="input-container email">
+              <div class="input-container email"></div>
+            </div>
+
+            <div class="input-container password">
+              <strong> <label for="email">Email</label></strong>
+              <input
+                type="text"
+                id="fname"
+                name="password"
+                placeholder="example@domain.com"
+                name="sample"
+                [(ngModel)]="credentials.email"
+              />
+              <i class="far fa-eye-slash"></i>
+            </div>
+            <div class="input-container password">
+              <strong> <label for="email">Password</label></strong>
+              <input
+                type="password"
+                id="fname"
+                name="password"
+                placeholder="Must be atleast 6 characters"
+                [(ngModel)]="credentials.password"
+              />
+              <i class="far fa-eye-slash"></i>
+            </div>
+            <div class="input-container password">
+              <strong> <label for="email">Confirm Password</label></strong>
+              <input
+                type="password"
+                id="fname"
+                name="password"
+                placeholder="Must be atleast 6 characters"
+                [(ngModel)]="credentials.password_confirm"
+              />
+              <i class="far fa-eye-slash"></i>
+            </div>
+
+            <button class="signup-btn" (click)="register()">Sign Up</button>
+
+            <section class="copy legal">
+              <p>
+                <span class="email"
+                  >By continuing,you agree to accept our <br />
+                  <a href="#">Privacy Policy</a> &amp;
+                  <a href="#">Terms of Service</a></span
+                >
+              </p>
+            </section>
+            <br />
+          </form>
+        </div>
+      </ion-card-content>
     </ion-card>
   </ion-card>
 </ion-content>

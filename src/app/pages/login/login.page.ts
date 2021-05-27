@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController, MenuController } from '@ionic/angular';
+import { AlertController, LoadingController, MenuController } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
@@ -16,20 +16,27 @@ export class LoginPage implements OnInit {
     password: '',
   }
 
-  constructor(private alertController: AlertController, private apiService: ApiService, private router: Router, private storage: LocalStorageService,private menu: MenuController) { }
+  constructor(private loadingController:LoadingController,  private alertController: AlertController, private apiService: ApiService, private router: Router, private storage: LocalStorageService,private menu: MenuController) { 
+   
+  }
 
   ngOnInit() {
+    
+  }
+
+  ionViewWillEnter(){
     this.menu.enable(false);
   }
 
-  public login(){
 
+  public login(){
     if(!this.credentials.email || !this.credentials.password ){
 
       const err = this.presentAlert('All fields are required');
       return err
 
     }
+  
 
     let requestObject = {
       method: "POST",
@@ -61,5 +68,6 @@ export class LoginPage implements OnInit {
 
     await alert.present();
   }
+
 
 }

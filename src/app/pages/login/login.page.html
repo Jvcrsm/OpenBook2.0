@@ -1,49 +1,77 @@
-<ion-header> </ion-header>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+  rel="stylesheet"
+/>
 
 <ion-content>
-  <ion-item lines="none">
-    <img src="../../../assets/logo.png" alt="" id="logo" />
-  </ion-item>
-  <ion-card id="content-card"
+  <ion-item lines="none"> </ion-item>
+  <ion-card id="content-card" class="first"
     ><ion-card id="login-pic" class="ion-float-left">
+      <div></div>
       <img src="../../../assets/reading.svg" alt="" id="login-img" />
-
-      <h2 class="ion-text-center">Login</h2>
+      <div style="padding: 35px"></div>
     </ion-card>
-    <ion-card id="login-content" class="ion-float-left ion-padding">
-      <ion-item class="form-item">
-        <ion-icon name="mail-outline"></ion-icon>
-        <ion-input
-          type="text"
-          placeholder="Email"
-          [(ngModel)]="credentials.email"
-        ></ion-input>
-      </ion-item>
+    <ion-card id="login-content" class="ion-float-left">
+      <ion-card-content>
+        <ion-item lines="none">
+          <img src="../../../assets/logo.png" alt="" id="logo" />
+          <strong>Openbook</strong>
+        </ion-item>
+        <div class="right">
+          <form>
+            <section class="copy">
+              <h2 Sign up></h2>
+              <div class="login-container">
+                <strong>Log in</strong>
+              </div>
+            </section>
+            <div class="input-container email">
+              <strong> <label for="email">Email</label></strong>
+              <input
+                placeholder="example@domain.com"
+                type="email"
+                name="email"
+                id="email"
+                [(ngModel)]="credentials.email"
+              />
+            </div>
+            <div class="input-container password">
+              <strong> <label for="email">Password</label></strong>
+              <input
+                type="password"
+                id="fname"
+                name="password"
+                placeholder="Must be atleast 6 characters"
+                [(ngModel)]="credentials.password"
+              />
+              <i class="far fa-eye-slash"></i>
+            </div>
 
-      <ion-item class="form-item">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input
-          type="text"
-          placeholder="Password"
-          [(ngModel)]="credentials.password"
-        ></ion-input>
-      </ion-item>
+            <div class="input-container cta">
+              <label class="checbox-container">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Remember me
+              </label>
+            </div>
+            <button class="signup-btn" (click)="login()">Log in</button>
 
-      <ion-button expand="block" color="dark" (click)="login()">
-        Login
-      </ion-button>
-      <h5 class="ion-text-center">or</h5>
-      <ion-button
-        expand="block"
-        color="success"
-        [routerLink]="['/register']"
-        routerLinkActive="router-link-active"
-      >
-        Register
-      </ion-button>
-      <ion-item class="ion-float-right">
-        <h6>Forgot password?</h6>
-      </ion-item>
+            <section class="copy legal">
+              <p>
+                <span class="email">
+                  Dont have account?<a
+                    [routerLink]="['/register']"
+                    routerLinkActive="router-link-active"
+                    >Sign up</a
+                  ></span
+                >
+              </p>
+            </section>
+            <br />
+          </form>
+        </div>
+      </ion-card-content>
     </ion-card>
   </ion-card>
 </ion-content>

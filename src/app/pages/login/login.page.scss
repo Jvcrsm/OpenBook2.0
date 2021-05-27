@@ -18,15 +18,14 @@ h6 {
   margin-bottom: 4%;
 }
 #content-card {
+  box-shadow: none;
+  box-shadow: 0px 5px 45px 0px rgba(0, 0, 0, 0.151);
+  border-radius: 30px;
+
   height: 70%;
   width: 60%;
   margin: auto;
-  background: -webkit-linear-gradient(
-    to right
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --background: linear-gradient(-225deg, #b7f8db 0%, #50a7c2 100%);
 }
 
 #logo {
@@ -34,19 +33,257 @@ h6 {
 }
 
 #login-content {
-  margin-top: 10%;
+  box-shadow: none;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.404);
+  border-radius: 30px;
+  width: 46%;
+  margin-top: 5%;
   width: 46%;
 }
 
 #login-img {
-  padding-top: 12%;
+  padding-top: 0%;
 }
 
 #login-pic {
+  box-shadow: none;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.404);
+  border-radius: 30px;
   width: 50%;
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
-ion-content {
-  --background: url("../../../assets/images/back.png");
+.wrap-input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  margin-bottom: 26px;
+  box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  line-height: 1.2;
+  border: none;
+  outline: none;
+  height: 46px;
+  padding: 0 20px 0 23px;
+}
+.form-btn {
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 300px;
+  height: 42px;
+  background-color: #00929e;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 5px;
+  transition: all 0.4s;
+}
+
+.form-btn:hover {
+  background-color: #007c8e;
+}
+.form-btn2 {
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 300px;
+  height: 42px;
+  background-color: #fcaf17;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 5px;
+  transition: all 0.4s;
+}
+.form-btn2:hover {
+  background-color: #f58220;
+}
+
+span {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
+  font-weight: 400px;
+}
+
+//ui
+
+$font-size: 100%;
+$font-size: 16px;
+$line-height: 1.5;
+$primary: #233975;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+}
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 80%;
+  text-align: center;
+}
+
+.split-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  height: 200px;
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-size: cover;
+}
+
+.left .copy {
+  color: white;
+  text-align: center;
+  // -webkit-font-smoohing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
+.left p {
+  font-weight: 400;
+}
+
+.right .copy {
+  color: black;
+  text-align: center;
+}
+
+.right .copy p {
+  margin: 1.5em 0;
+  font-size: 0.875rem;
+}
+
+.right form {
+  width: 328px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #c4c4c4;
+  padding: 1em;
+  margin-bottom: 1.25em;
+  font-size: 0.875rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.input-container.password {
+  position: relative;
+}
+.input-container.password i {
+  position: absolute;
+  top: 42px;
+  right: 16px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 1.25rem 0;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  width: 5px;
+  height: 10px;
+  left: 8px;
+  top: 4px;
+}
+
+.signup-btn {
+  display: block;
+  width: 100%;
+  background: #00929e;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signup-btn :hover {
+  background: #007c8e;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .split-screen {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .left,
+  .right {
+    display: flex;
+  }
 }
