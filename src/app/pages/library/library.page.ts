@@ -19,6 +19,7 @@ export class LibraryPage implements OnInit {
     autoplay: true
   }
 
+  sample = [1,1,1,1,1,1];
   books = [];
   organizedBook = [];
   chapters = [];

@@ -11,19 +11,24 @@
 ></script>
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay" color="dark">
-      <ion-content color="dark">
-        <ion-list id="inbox-list">
-          <ion-item color="none" lines="none">
-            <ion-icon name="settings-outline"></ion-icon>
-          </ion-item>
-
+    <ion-menu
+      style="
+        background-color: rgb(243, 232, 232);
+        box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+      "
+      contentId="main-content"
+      type="overlay"
+    >
+      <ion-content class="main" style="background-color: white; border: none">
+        <ion-list id="inbox-list" style="background-color: white">
           <ion-avatar id="menu-pic">
-            <img src="../assets/Avatar/2.png" />
+            <img src="../assets/user-profile.png" />
           </ion-avatar>
 
-          <h2 class="ion-text-center">Pepito Manaloto</h2>
-          <h6 class="ion-text-center">pepitoManaloto@gmail.com</h6>
+          <h2 class="ion-text-center" style="font-weight: 800">
+            Juan Dela Cruz
+          </h2>
+          <h6 class="ion-text-center">Juaandelacruz@gmail.com</h6>
 
           <ion-menu-toggle
             auto-hide="false"
@@ -35,17 +40,15 @@
               lines="none"
               detail="false"
               routerLinkActive="selected"
-              color="dark"
+              style="padding: 10px"
             >
               <ion-icon slot="start" [md]="p.icon + '-sharp'"></ion-icon>
-              <h5>{{ p.title }}</h5>
+              <h5 style="font-size: 1rem; font-weight: 600; padding: 10px">
+                {{ p.title }}
+              </h5>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
-        <ion-avatar id="logo">
-          <img src="../assets/logo.png" id="logo-pic" />
-        </ion-avatar>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
