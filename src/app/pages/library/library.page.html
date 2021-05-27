@@ -72,41 +72,9 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-searchbar
-    showCancelButton="focus"
-    id="search-bar"
-    class="ion-float-right"
-  ></ion-searchbar>
+  <h1 class="_header">Library</h1>
 
-  <!-- <ion-item id="genres" class="ion-float-left">
-    <ion-label>Genre</ion-label>
-    <ion-select
-      [interfaceOptions]="customAlertOptions"
-      interface="alert"
-      multiple="true"
-      placeholder="Select"
-    >
-      <ion-select-option value="bacon">All</ion-select-option>
-      <ion-select-option value="bacon">Fiction</ion-select-option>
-      <ion-select-option value="olives">Narrative</ion-select-option>
-      <ion-select-option value="xcheese">Novel</ion-select-option>
-      <ion-select-option value="peppers">Poetry</ion-select-option>
-      <ion-select-option value="mushrooms">Mystery</ion-select-option>
-      <ion-select-option value="onions">Thriller</ion-select-option>
-      <ion-select-option value="pepperoni">Science Fiction</ion-select-option>
-      <ion-select-option value="pineapple">Fantasy</ion-select-option>
-      <ion-select-option value="sausage">Article</ion-select-option>
-      <ion-select-option value="Spinach">Drama</ion-select-option>
-    </ion-select>
-  </ion-item> -->
-
-  <ion-item></ion-item>
-  <ion-item></ion-item>
-
-  <!-- <ion-card
-    class="book-cover ion-float-left"
-    *ngFor="let book of organizedBook"
-  >
+  <ion-card class="book-cover ion-float-left" *ngFor="let book of books">
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -114,7 +82,7 @@
         </ion-col>
         <ion-col size="7">
           <ion-item class="ion-text-center">
-            <ion-label>{{book.title }}</ion-label>
+            <ion-label style="font-weight: 700">{{book.title}}</ion-label>
           </ion-item>
 
           <ion-card-content
@@ -122,38 +90,15 @@
             <ion-button
               expand="block"
               shape="round"
-              color="dark"
-              (click)="viewBook(book._id, book.title, book.by, book.owner_id)"
+              style="margin: 20px 0 20px 0; --background: #f4976c"
             >
               Read
             </ion-button>
-            <ion-badge *ngFor="let genre of book.genre">{{genre}}</ion-badge>
-          </ion-card-content>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card> -->
-
-  <ion-card class="book-cover ion-float-left" *ngFor="let sampl of sample">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <img id="book-cover" src="https://picsum.photos/240/350" />
-        </ion-col>
-        <ion-col size="7">
-          <ion-item class="ion-text-center">
-            <ion-label>Sample</ion-label>
-          </ion-item>
-
-          <ion-card-content
-            >Sample
-            <ion-button expand="block" shape="round" color="dark">
-              Read
-            </ion-button>
-            <ion-badge>sample</ion-badge>
-            <ion-badge>sample</ion-badge>
-            <ion-badge>sample</ion-badge>
-            <ion-badge>sample</ion-badge>
+            <div>
+              <ion-badge style="margin: 10px" *ngFor="let genre of book.genre">
+                {{genre}}</ion-badge
+              >
+            </div>
           </ion-card-content>
         </ion-col>
       </ion-row>

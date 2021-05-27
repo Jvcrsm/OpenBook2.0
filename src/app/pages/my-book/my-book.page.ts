@@ -11,61 +11,20 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class MyBookPage implements OnInit {
 
-  verified:string = "false";
-  userData:any;
-  userId: any;
-  books = [{
-    _id: '1',
-    title: 'Default',
-    summary: 'Default',
-    by:'',
-    genre: []
-  }]
+  verified:string = "true";
+  books = [];
   constructor(private modalController: ModalController, private storage: LocalStorageService, private apiService: ApiService, private router: Router) { 
-    this.userId = this.storage.userId;
-    this.storage.canPost = true;
-    this.userData = this.storage.userData;
-    this.verified = this.userData.verified;
+   this.books = this.storage.userData.books;
+   this.verified = this.storage.userData.verified;
   }
 
   ngOnInit() {
-    // console.log(this.userId);
-    this.showUserBooks();
+   this.getUserBooks();
   }
 
-  public showUserBooks(){
-    let requestObject = {
-      location: `users/get-user-data/${this.userId}`,
-      method: "GET"
+  public getUserBooks(){
+ 
   }
 
-  this.apiService.makeRequest(requestObject).then((data) => {
-    this.books = data.user.books
-  });
-  }
-
-
-  public viewBook(id, title, by){
-    this.storage.bookId = id;
-    this.storage.bookTitle = title;
-    this.storage.by = by;
-    this.router.navigate(['/view-book']);
-  }
-
-  async presentModal() {
-    // const modal = await this.modalController.create({
-    //   component: PostBookPage,
-    //   cssClass: 'my-custom-class'
-    // });
-    
-    // await modal.present();
-
-    // const { data } = await modal.onWillDismiss();
-    // if(this.storage.didPost){
-    //   this.books.push(data);
-    //   this.storage.didPost = false;
-    // }
-    
-  }
 
 }
