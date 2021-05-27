@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LocalStorageService {
 
+    userData:any;
   constructor() { }
   user:any;
   by = '';

@@ -1,11 +1,4 @@
-<ion-header>
-  <ion-toolbar color="tertiary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title class="ion-text-center">Diary</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header> </ion-header>
 
 <ion-content class="ion-padding">
   <ion-item lines="none">
@@ -14,60 +7,49 @@
 
   <h2 class="ion-text-center">Pepito Manaloto</h2>
   <h6 class="ion-text-center">pepitoManaloto@gmail.com</h6>
+  <p class="ion-text-center">
+    <ion-button shape="round" *ngIf="verified == 'false'" (click)="verify()">
+      Verify Account
+    </ion-button>
+    <ion-badge color="primary" *ngIf="verified == 'true'" color="success"
+      >Account Verified</ion-badge
+    >
+  </p>
 
   <ion-item>
     <ion-card class="ion-float-left" id="people-card">
       <ion-card class="stat-card">
-        <ion-button color="success" shape="round" class="ion-float-right"
-          ><ion-icon name="eye-outline"></ion-icon
-        ></ion-button>
-        <ion-label>Views</ion-label>
-        <h2>50,000</h2>
-        <ion-label class="ion-float-right" class="date-label"
-          >March 8, 2021</ion-label
-        >
-      </ion-card>
-      <ion-card class="stat-card">
         <ion-button color="warning" shape="round" class="ion-float-right"
-          ><ion-icon name="star-outline"></ion-icon
+          ><ion-icon name="bookmark-outline"></ion-icon
         ></ion-button>
-        <ion-label>Stars</ion-label>
-        <h2>50,000</h2>
+        <ion-label>Chapters Published</ion-label>
+        <h2>{{count.chapters}}</h2>
         <ion-label class="ion-float-right" class="date-label"
-          >March 8, 2021</ion-label
+          >{{today}}</ion-label
         >
       </ion-card>
       <ion-card class="stat-card">
         <ion-button color="primary" shape="round" class="ion-float-right"
           ><ion-icon name="pencil-outline"></ion-icon
         ></ion-button>
-        <ion-label>Notes</ion-label>
-        <h2>50,000</h2>
+        <ion-label>Notes Published</ion-label>
+        <h2>{{count.notes}}</h2>
         <ion-label class="ion-float-right" class="date-label"
-          >March 8, 2021</ion-label
+          >{{today}}</ion-label
         >
       </ion-card>
       <ion-card class="stat-card">
         <ion-button color="tertiary" shape="round" class="ion-float-right"
           ><ion-icon name="book-outline"></ion-icon
         ></ion-button>
-        <ion-label>Books</ion-label>
-        <h2>50,000</h2>
+        <ion-label>Books Published</ion-label>
+        <h2>{{count.books}}</h2>
         <ion-label class="ion-float-right" class="date-label"
-          >March 8, 2021</ion-label
+          >{{today}}</ion-label
         >
       </ion-card>
     </ion-card>
     <ion-card class="ion-float-left" id="message-card">
-      <ion-item class="ion-text-justify">
-        <ion-label position="floating" color="primary">About</ion-label>
-        <ion-textarea placeholder="."
-          >I am just a normal child wew Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Ut quia quas quidem saepe id fugiat veritatis
-          impedit officiis voluptatem ad maiores minus hic sit omnis architecto
-          cupiditate ex, quaerat iusto?</ion-textarea
-        >
-      </ion-item>
       <ion-item>
         <ion-label position="floating" color="primary">First Name</ion-label>
         <ion-input type="text" placeholder="."><h2>Pepito</h2></ion-input>
@@ -79,12 +61,6 @@
       <ion-item>
         <ion-label position="floating" color="primary">Gender</ion-label>
         <ion-input type="text" placeholder="."><h2>Female</h2></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" color="primary">Birthday</ion-label>
-        <ion-input type="text" placeholder="."
-          ><h2>March 10 2021</h2></ion-input
-        >
       </ion-item>
       <ion-item>
         <ion-label position="floating" color="primary">Contact No.</ion-label>

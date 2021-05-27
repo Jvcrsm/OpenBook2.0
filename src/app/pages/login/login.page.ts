@@ -43,6 +43,7 @@ export class LoginPage implements OnInit {
         this.storage.setUserId(val.user._id);
         this.storage.userName = val.user.name;
         this.storage.user = val.user;
+        this.storage.userData = val.user;
         this.router.navigate(['/library']);
         return;
     }
