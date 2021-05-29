@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar style="--background: #19a5b4; color: white">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       <ion-back-button defaultHref="library"></ion-back-button>
@@ -9,23 +9,45 @@
 </ion-header>
 
 <ion-content>
-  <img
-    src="../../../assets/slides/2.jpeg"
-    alt=""
-    id="book-img"
-    class="ion-float-left"
-  />
-  <h1>{{title}}</h1>
-  <h5>written by: {{by}}</h5>
-  <h5>sampleEmail@gmail.com</h5>
-  <ion-item lines="none"
-    ><ion-button shape="round" color="success"> Send Message </ion-button>
-    <ion-button shape="round" color="danger" (click)="presentReport()">
-      Report
-    </ion-button>
-  </ion-item>
+  <div class="book-header">
+    <img
+      src="../../../assets/slides/2.jpeg"
+      alt=""
+      id="book-img"
+      class="ion-float-left"
+    />
+    <h1 class="title-text">The girl who reads</h1>
+    <h5 style="color: rgba(255, 255, 255, 0.555)">
+      written by: Juan Dela Cruz
+    </h5>
+    <h5 style="color: rgba(255, 255, 255, 0.555)">
+      juandelaCruzdababy@gmail.com
+    </h5>
+    <p>
+      <ion-button
+        shape="round"
+        class="msg-button cirlce-butns"
+        (click)="presentAlert()"
+      >
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        shape="round"
+        color="danger"
+        class="cirlce-butns"
+        (click)="presentModal()"
+      >
+        <ion-icon name="warning-outline"></ion-icon>
+      </ion-button>
+    </p>
+  </div>
+
   <ion-item>
-    <ion-button class="page-commu-button" id="pages-button" color="secondary">
+    <ion-button
+      class="page-commu-button"
+      id="pages-button"
+      style="--background: #19a5b4"
+    >
       Pages
     </ion-button>
     <ion-button
@@ -39,27 +61,25 @@
     </ion-button>
   </ion-item>
 
-  <br />
-  <br />
-
   <ion-card class="ion-float-left" id="pages">
-    <ion-card
-      routerLink="/page"
-      routerDirection="root"
-      class="page-card"
-      *ngFor="let chapter of chapters;  let i = index "
-      color="dark"
-    >
-      <h4>
-        {{i + 1}} {{chapter.title}}
-        <ion-label class="ion-float-right" id="page-date-added"
-          >March 20, 1978</ion-label
-        >
-      </h4>
-    </ion-card>
-  </ion-card>
-
-  <ion-card class="ion-float-left" id="comments">
-    <img src="../../../assets/reading.svg" alt="" />
+    <ion-list>
+      <ion-item
+        *ngFor="let chapter of chapters; let i = index"
+        (click)="viewPage(i)"
+      >
+        <ion-label
+          >Page {{i + 1}} : The Golden boi
+          <span class="ion-float-right">5/29/21</span>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <p class="ion-text-center" *ngIf="canPost">
+      <ion-button
+        shape="round"
+        style="--background: #19a5b4"
+        (click)="addChapter()"
+        ><ion-icon name="add-circle-outline"></ion-icon> Add Page
+      </ion-button>
+    </p>
   </ion-card>
 </ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar style="--background: #f4976c; color: white">
+    <ion-title class="ion-text-center">REPORT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Title</ion-label>
+    <ion-input
+      type="text"
+      placeholder="Input Title"
+      [(ngModel)]="book.title"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Genre</ion-label>
+    <ion-select
+      multiple="true"
+      [value]="['Comedy', 'Fantasy', 'Romance', 'Slice Of Life', 'Sci-Fi', 'Drama', 'Short Story', 'Action', 'Horror']"
+      [(ngModel)]="genre"
+    >
+      <ion-select-option isChecked="false" value="Comedy"
+        >Comedy</ion-select-option
+      >
+      <ion-select-option value="Fantasy">Fantasy</ion-select-option>
+      <ion-select-option value="Romance">Romance</ion-select-option>
+      <ion-select-option value="Slice Of Life">Slice Of Life</ion-select-option>
+      <ion-select-option value="Sci-Fi">Sci-Fi</ion-select-option>
+      <ion-select-option value="Drama">Drama</ion-select-option>
+      <ion-select-option value="Short Story">Short Story</ion-select-option>
+      <ion-select-option value="Action">Action</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class="ion-float-left">
+    <ion-label position="floating" color="primary">Summary</ion-label>
+    <ion-textarea
+      rows="5"
+      cols="70"
+      placeholder="Summary here"
+      [(ngModel)]="book.summary"
+    ></ion-textarea>
+  </ion-item>
+
+  <ion-button
+    expand="block"
+    style="--background: #f4976c"
+    shape="round"
+    (click)="addBook()"
+  >
+    Publish
+  </ion-button>
+</ion-content>

@@ -62,6 +62,14 @@ const routes: Routes = [
   {
     path: 'report',
     loadChildren: () => import('./modals/report/report.module').then( m => m.ReportPageModule)
+  },
+  {
+    path: 'post-book',
+    loadChildren: () => import('./pages/post-book/post-book.module').then( m => m.PostBookPageModule)
+  },
+  {
+    path: 'post-chapter',
+    loadChildren: () => import('./pages/post-chapter/post-chapter.module').then( m => m.PostChapterPageModule)
   }
 
 

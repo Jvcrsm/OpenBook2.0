@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ApiService } from 'src/app/services/api.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
@@ -11,7 +13,7 @@ export class ReportPage implements OnInit {
   type:any;
   bookTitle:string;
   info:string = '';
-  constructor(private storage: LocalStorageService) { 
+  constructor(private storage: LocalStorageService, private apiService:ApiService, private modalController: ModalController) { 
     this.bookTitle = this.storage.bookTitle;
   }
 
@@ -19,8 +21,20 @@ export class ReportPage implements OnInit {
   }
 
   report(){
-    console.log(this.type);
-    console.log(this.info);
+    let requestObject = {
+      location: "users/report",
+      method: "POST",
+      body: {
+        bookId: this.storage.bookId,
+        info: this.info,
+        type: this.type,
+        title: this.bookTitle
+      }
+    }
+
+    this.apiService.makeRequest(requestObject).then((val) => {
+      this.modalController.dismiss();
+  });
   }
 
   

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar style="--background: #19a5b4; color: white">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       <ion-back-button defaultHref="library"></ion-back-button>
@@ -9,20 +9,29 @@
 </ion-header>
 
 <ion-content>
-  <img
-    src="../../../assets/slides/2.jpeg"
-    alt=""
-    id="book-img"
-    class="ion-float-left"
-  />
-  <h1>{{title}}</h1>
-  <h5>written by: {{by}}</h5>
-  <h5>sampleEmail@gmail.com</h5>
-  <ion-item lines="none"
-    ><ion-icon name="archive-outline"></ion-icon>
-    <h5>Add to Shelf</h5>
-    <ion-toggle slot="start" name="blueberry" checked></ion-toggle>
-  </ion-item>
+  <div class="book-header">
+    <img
+      src="../../../assets/slides/2.jpeg"
+      alt=""
+      id="book-img"
+      class="ion-float-left"
+    />
+    <h1 class="title-text">The girl who reads</h1>
+    <h5 style="color: rgba(255, 255, 255, 0.555)">
+      written by: Juan Dela Cruz
+    </h5>
+    <h5 style="color: rgba(255, 255, 255, 0.555)">
+      juandelaCruzdababy@gmail.com
+    </h5>
+    <p>
+      <ion-button shape="round" class="msg-button cirlce-butns">
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" color="danger" class="cirlce-butns">
+        <ion-icon name="warning-outline"></ion-icon>
+      </ion-button>
+    </p>
+  </div>
   <ion-item>
     <ion-button
       class="page-commu-button"
@@ -38,7 +47,7 @@
     </ion-button>
   </ion-item>
 
-  <ion-card
+  <ion-card class="ion-padding" *ngIf="canPost"
     ><ion-item class="post-conetent">
       <ion-label position="floating">Post an update</ion-label>
       <ion-input></ion-input>
@@ -50,13 +59,13 @@
       <ion-button color="light">
         <ion-icon name="ellipsis-vertical-outline"></ion-icon> + Poll
       </ion-button> -->
-      <ion-button slot="end" color="dark">
-        Post <ion-icon name="paper-plane-outline"></ion-icon>
+      <ion-button slot="end" style="--background: #19a5b4">
+        Post <ion-icon name="paper-plane-outline" class="post-icon"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-card>
 
-  <ion-card *ngFor="let post of posts"
+  <ion-card *ngFor="let post of posts" class="ion-padding"
     ><ion-item class="post-conetent">
       <ion-thumbnail slot="start">
         <img src="../../../assets/slides/2.jpeg" />

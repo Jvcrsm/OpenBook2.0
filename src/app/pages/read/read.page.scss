@@ -1,6 +1,6 @@
 #book-img {
-  width: 25vh;
-  height: 25vh;
+  width: 20vh;
+  height: 26vh;
   margin: 2vh;
 }
 
@@ -14,7 +14,8 @@
 }
 
 #pages {
-  width: 60vh;
+  width: 70vh;
+  margin-left: 20%;
 }
 #pages-button {
   --border-radius: 20px 0px 0px 20px;
@@ -71,4 +72,44 @@ ion-item {
 
 ion-avatar {
   margin: auto;
+}
+
+.book-header {
+  height: 40%;
+  width: 100%;
+  background-image: url("../../../assets/back-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+}
+
+.title-text {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3em;
+  letter-spacing: 6px;
+  margin-bottom: 4%;
+}
+
+.msg-button {
+  --background: #f4976c;
+}
+
+.cirlce-butns {
+  margin-top: 1%;
+  width: 6em;
+  padding: 0;
+}
+
+ion-icon {
+  width: 3em;
+  height: 3em;
+  margin: 0;
+}
+
+.ads-img {
+  height: 15em;
+  width: 100%;
+  margin-bottom: 3em;
 }

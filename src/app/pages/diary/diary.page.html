@@ -5,8 +5,8 @@
     <img src="../../../assets/pic.jpg" alt="" id="diary-img" />
   </ion-item>
 
-  <h2 class="ion-text-center">Pepito Manaloto</h2>
-  <h6 class="ion-text-center">pepitoManaloto@gmail.com</h6>
+  <h2 class="ion-text-center">{{userData.name}}</h2>
+  <h6 class="ion-text-center">{{userData.email}}</h6>
   <p class="ion-text-center">
     <ion-button shape="round" *ngIf="verified == 'false'" (click)="verify()">
       Verify Account
@@ -50,35 +50,32 @@
       </ion-card>
     </ion-card>
     <ion-card class="ion-float-left" id="message-card">
-      <ion-item>
-        <ion-label position="floating" color="primary">First Name</ion-label>
-        <ion-input type="text" placeholder="."><h2>Pepito</h2></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" color="primary">Last Name</ion-label>
-        <ion-input type="text" placeholder="."><h2>Manaloto</h2></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" color="primary">Gender</ion-label>
-        <ion-input type="text" placeholder="."><h2>Female</h2></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" color="primary">Contact No.</ion-label>
-        <ion-input type="text" placeholder="."
-          ><h2>0982738927838</h2></ion-input
-        >
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" color="primary">Adress</ion-label>
-        <ion-input type="text" placeholder="."
-          ><h2>#96 Rizal Street, Olongapo City, Zambales</h2></ion-input
-        >
-      </ion-item>
-      <ion-item>
-        <ion-button expand="block" color="success" shape="round">
-          Update
-        </ion-button>
-      </ion-item>
+      <div class="ion-padding">
+        <div style="text-align: left !important; padding-left: 10px">
+          <span class="elabel">Full Name</span>
+        </div>
+        <div class="wrap-input">
+          <input class="input" type="text" value="{{userData.name}}" />
+        </div>
+
+        <div style="text-align: left !important; padding-left: 10px">
+          <span class="elabel">Email</span>
+        </div>
+        <div class="wrap-input">
+          <input class="input" type="text" value="{{userData.email}}" />
+        </div>
+
+        <div style="text-align: left !important; padding-left: 10px">
+          <span class="elabel">Contact</span>
+        </div>
+        <div class="wrap-input">
+          <input class="input" type="text" value="099982388" />
+        </div>
+      </div>
+      <div class="container-form-btn">
+        <button class="form-btn custom-font">Update</button>
+        <br />
+      </div>
     </ion-card>
   </ion-item>
 </ion-content>

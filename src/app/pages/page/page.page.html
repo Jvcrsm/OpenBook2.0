@@ -1,94 +1,135 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar style="--background: #19a5b4">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
       <ion-back-button defaultHref="read"></ion-back-button>
     </ion-buttons>
-    <ion-title>
-      Page
-      <span>1</span>
-    </ion-title>
+    <ion-title class="ion-text-center title-text"> {{title}} </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <!-- 
   <ion-card>
-    <ion-card-header>
-      <ion-card-title class="ion-text-center"
-        >The Book of Wisdom</ion-card-title
+    <p class="ion-text-center">
+      <ion-button shape="round" class="left" (click)="prev()">
+        <ion-icon name="arrow-back-outline"></ion-icon> </ion-button
+      ><ion-button
+        shape="round"
+        [routerLink]="['/library']"
+        routerLinkActive="router-link-active"
       >
-      <h6 class="ion-text-center">written by: Elsa Manaloto</h6>
-      <h6 class="ion-text-center">elsamanaloto@gmail.com</h6>
-    </ion-card-header>
+        <ion-icon name="home-outline"></ion-icon> </ion-button
+      ><ion-button shape="round" class="right" (click)="next()">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </p>
+    <p class="ion-text-justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore "magnam sapiente" nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla "consequuntur" deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+    </p>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="ion-text-center">The Lamb Sauce</ion-card-title>
-        <ion-toolbar color="tertiary">
-          <ion-card-content class="ion-text-justify page-content">
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            <br />
+    <p class="ion-text-justify">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos"
+    </p>
 
-            <br />
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            <br />
-            <br />
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-            Madison was named the capital of the Wisconsin Territory in 1836.
-          </ion-card-content>
-        </ion-toolbar>
-        <ion-button color="secondary"
-          ><ion-icon name="arrow-back-circle-outline"></ion-icon
-        ></ion-button>
-        <ion-button color="secondary"
-          ><ion-icon name="home-sharp"></ion-icon
-        ></ion-button>
-        <ion-button color="secondary"
-          ><ion-icon name="arrow-forward-circle-outline"></ion-icon>
-        </ion-button> </ion-card-header></ion-card
-  ></ion-card> -->
+    <p class="ion-text-justify">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos"
+    </p>
+
+    <p class="ion-text-justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore "magnam sapiente" nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla "consequuntur" deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore "magnam sapiente" nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla "consequuntur" deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+    </p>
+
+    <p class="ion-text-justify">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos"
+    </p>
+
+    <p class="ion-text-justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore "magnam sapiente" nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla "consequuntur" deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+    </p>
+
+    <p class="ion-text-justify">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos"
+    </p>
+
+    <p class="ion-text-justify">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos"
+    </p>
+
+    <p class="ion-text-justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore "magnam sapiente" nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla "consequuntur" deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore "magnam sapiente" nulla consequuntur deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla "consequuntur" deserunt, eos
+      impedit ab tempore nobis voluptate harum dolor. Magnam, laborum nisi.
+    </p>
+
+    <p class="ion-text-justify">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut ducimus
+      modi, commodi inventore magnam sapiente nulla consequuntur deserunt, eos"
+    </p>
+
+    <p class="ion-text-center">
+      <ion-button shape="round" class="left" (click)="prev()">
+        <ion-icon name="arrow-back-outline"></ion-icon> </ion-button
+      ><ion-button
+        shape="round"
+        [routerLink]="['/library']"
+        routerLinkActive="router-link-active"
+      >
+        <ion-icon name="home-outline"></ion-icon> </ion-button
+      ><ion-button shape="round" class="right" (click)="next()">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </p>
+  </ion-card>
 </ion-content>

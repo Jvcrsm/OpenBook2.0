@@ -23,7 +23,8 @@ export class LibraryPage implements OnInit {
 
   books = [];
   sample = [1,1];
-  constructor(private menu: MenuController, private apiService: ApiService) { 
+  constructor(private menu: MenuController, private apiService: ApiService, private storage: LocalStorageService, private router: Router) { 
+    this.storage.canPost = false;
     
   }
   
@@ -52,6 +53,30 @@ export class LibraryPage implements OnInit {
     });
   }
 
+  public viewBook(bookId, bookTitle){
+    this.storage.posts = [];
+    this.storage.bookId = bookId;
+    this.storage.bookTitle = bookTitle;
+    this.storage.chapters = [];
+
+    this.allData.forEach((val) =>{
+      val.chapters.forEach(chapter =>{
+        if(chapter.bookId == bookId){
+          this.storage.chapters.push(chapter);
+        }
+      })
+    });
+
+    this.allData.forEach((val) =>{
+      val.posts.forEach(post =>{
+        if(post.bookId == bookId){
+          this.storage.posts.push(post);
+        }
+      })
+    });
+
+    this.router.navigate(['/read']);
+  }
   
 
 }

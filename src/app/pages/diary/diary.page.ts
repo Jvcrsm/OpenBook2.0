@@ -19,6 +19,7 @@ export class DiaryPage implements OnInit {
     books: 1,
     notes: 1
   }
+  
   constructor(private storage: LocalStorageService, private apiService: ApiService, private alertController: AlertController) { 
     this.userData = this.storage.userData;
   }

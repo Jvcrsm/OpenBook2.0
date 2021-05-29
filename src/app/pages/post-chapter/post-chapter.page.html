@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar style="--background: #19a5b4; color: white">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center"> Add Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Title Here"
+        [(ngModel)]="Chapter.title"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">More Info</ion-label>
+      <ion-textarea
+        rows="12"
+        cols="70"
+        placeholder="Content here"
+      ></ion-textarea>
+    </ion-item>
+    <ion-button
+      (click)="addChapter()"
+      shape="round"
+      class="ion-float-right"
+      style="--background: #19a5b4; color: white; height: 4em"
+    >
+      <ion-icon name="add-circle-outline"></ion-icon> Add
+    </ion-button></ion-card
+  >
+</ion-content>

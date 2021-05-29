@@ -5,13 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class LocalStorageService {
 
+    chapters:any = [];
+    posts:any = [];
+    bookPage:any;
     userData:any;
+    canPost = false;
+    bookTitle = '';
+
+    
   constructor() { }
   user:any;
   by = '';
-  bookTitle = '';
+
   userName = '';
-  canPost = false;
+ 
   libraryPost = [];
   libraryChapters = [];
   fromLibrary = false;

@@ -90,7 +90,12 @@
             <ion-button
               expand="block"
               shape="round"
-              style="margin: 20px 0 20px 0; --background: #f4976c"
+              style="
+                margin: 20px 0 20px 0;
+                --background: #f4976c;
+                margin-top: 40%;
+              "
+              (click)="viewBook(book._id, book.title)"
             >
               Read
             </ion-button>

@@ -56,6 +56,7 @@
                 expand="block"
                 shape="round"
                 style="margin: 20px 0 20px 0; --background: #f4976c"
+                (click)="viewBook(book._id)"
               >
                 Read
               </ion-button>
@@ -75,7 +76,7 @@
   </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button style="--background: #f4976c" (click)="addBook()">
       <ion-icon name="add-circle-outline" class="fab-icon"></ion-icon>
     </ion-fab-button>
   </ion-fab>
