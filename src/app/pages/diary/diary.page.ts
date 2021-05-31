@@ -22,17 +22,19 @@ export class DiaryPage implements OnInit {
   
   constructor(private storage: LocalStorageService, private apiService: ApiService, private alertController: AlertController) { 
     this.userData = this.storage.userData;
+    this.verified = this.storage.userData.verified;
   }
 
   ngOnInit() {
   }
 
-  ionViewWillEnter(){
-    this.count.chapters = this.userData.chapters.length;
-    this.count.books = this.userData.books.length;
-    this.count.notes = this.userData.posts.length;
-    this.verified = this.userData.verified;
-  }
+  
+  // ionViewWillEnter(){
+  //   this.count.chapters = this.userData.chapters.length;
+  //   this.count.books = this.userData.books.length;
+  //   this.count.notes = this.userData.posts.length;
+  //   this.verified = this.userData.verified;
+  // }
 
  
   async verify(){
@@ -72,6 +74,7 @@ export class DiaryPage implements OnInit {
         }, {
           text: 'Ok',
           handler: (alertData) => {
+            console.log(alertData.name4);
             if(this.code == alertData.name4 ){
               this.verified = "true"
               this.storage.userData.verified = "true";
