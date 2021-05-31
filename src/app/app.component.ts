@@ -7,7 +7,7 @@ import { LocalStorageService } from './services/local-storage.service';
 })
 export class AppComponent {
   email = "randmodmail@gmail.com";
-  name = "Juan Dela Cruz";
+  name = "Pepito Manaloto";
   public appPages = [
     { title: 'Library', url: '/library', icon: 'book' },
     { title: 'My Books', url: '/my-book', icon: 'archive' },

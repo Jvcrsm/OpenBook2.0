@@ -39,11 +39,6 @@
   width: 60%;
   margin-left: 20%;
 }
-ion-badge {
-  border-radius: 10px;
-  width: 6vh;
-  margin: auto;
-}
 
 .book-cover {
   height: 40%;
@@ -76,15 +71,9 @@ ion-badge {
 
 ion-badge {
   border-radius: 1em;
-  width: 50%;
+  margin: 0.5em;
   --background: rgba(175, 184, 189, 0.678);
   --color: rgba(47, 48, 51, 0.897);
-}
-
-ion-badge {
-  border-radius: 10px;
-  width: 6vh;
-  margin: auto;
 }
 
 #genres,
@@ -177,15 +166,8 @@ ion-badge {
 
 ion-badge {
   border-radius: 1em;
-  width: 50%;
   --background: rgba(175, 184, 189, 0.678);
   --color: rgba(47, 48, 51, 0.897);
-}
-
-ion-badge {
-  border-radius: 10px;
-  width: 6vh;
-  margin: auto;
 }
 
 #genres,

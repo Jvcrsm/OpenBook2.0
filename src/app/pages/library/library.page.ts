@@ -13,7 +13,7 @@ export class LibraryPage implements OnInit {
 
   allData:any;
 
-  userName:string = "Juan Dela Cruz";
+  userName:string = "Pepito Manaloto";
   option = {
     slidesPerView:1.5,
     centeredSlides: true,

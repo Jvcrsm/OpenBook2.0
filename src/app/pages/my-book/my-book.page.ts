@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
@@ -13,12 +14,11 @@ import { PostBookPage } from '../post-book/post-book.page';
 export class MyBookPage implements OnInit {
 
   allData:any;
-
   verified:string = "true";
   books = [];
   chapters = [];
   posts = [];
-  constructor(private modalController: ModalController, private storage: LocalStorageService, private apiService: ApiService, private router: Router) { 
+  constructor(private modalController: ModalController, private storage: LocalStorageService, private apiService: ApiService, private router: Router, private http: HttpClient) { 
    this.books = this.storage.userData.books;
    this.chapters = this.storage.userData.chapters;
    this.posts = this.storage.userData.posts;
@@ -28,6 +28,10 @@ export class MyBookPage implements OnInit {
 
   ngOnInit() {
     this.showBooks();
+  }
+
+  gerRandomNum(){
+    console.log(1);
   }
 
 
