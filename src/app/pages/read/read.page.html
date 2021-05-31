@@ -16,18 +16,16 @@
       id="book-img"
       class="ion-float-left"
     />
-    <h1 class="title-text">The girl who reads</h1>
-    <h5 style="color: rgba(255, 255, 255, 0.555)">
-      written by: Juan Dela Cruz
-    </h5>
-    <h5 style="color: rgba(255, 255, 255, 0.555)">
-      juandelaCruzdababy@gmail.com
-    </h5>
+    <h1 class="title-text">{{title}}</h1>
+    <h5 style="color: rgba(255, 255, 255, 0.555)">written by: {{by}}</h5>
+    <ion-badge style="margin: 2px" *ngFor="let genre of genre">
+      {{genre}}</ion-badge
+    >
     <p>
       <ion-button
         shape="round"
         class="msg-button cirlce-butns"
-        (click)="presentAlert()"
+        (click)="sendMessage()"
       >
         <ion-icon name="mail-outline"></ion-icon>
       </ion-button>
@@ -68,7 +66,7 @@
         (click)="viewPage(i)"
       >
         <ion-label
-          >Page {{i + 1}} : The Golden boi
+          >Page {{i + 1}} : {{chapter.title}}
           <span class="ion-float-right">5/29/21</span>
         </ion-label>
       </ion-item>

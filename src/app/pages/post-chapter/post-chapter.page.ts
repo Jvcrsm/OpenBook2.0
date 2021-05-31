@@ -10,7 +10,9 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class PostChapterPage implements OnInit {
 
   public Chapter = {
-    title: ''
+    title: '', 
+    content: '',
+    bookId: ''
   }
   constructor(private storage:LocalStorageService, private router: Router) { }
 
@@ -18,7 +20,24 @@ export class PostChapterPage implements OnInit {
   }
 
   addChapter(){
-    this.storage.chapters.push(this.Chapter);
-    this.router.navigate(['read']);
+    console.log(this.storage.bookId);
+    // this.storage.chapters.push(this.Chapter);
+    // this.router.navigate(['read']);
+
+  //   let requestObject = {
+  //     location: "users/create-chapter",
+  //     method: "POST",
+  //     body: this.Chapter
+  //   }
+
+  //   this.apiService.makeRequest(requestObject).then((val) => {
+  //     if(val.statusCode == 201) {
+  //         this.storage.didPost = true;
+  //         this.modalController.dismiss(val.newPost);
+  //        // console.log(val.newPost.bookId[0]);
+  //     } else {
+  //         console.log("Something went wrong, your chapter could not be created.");
+  //     }
+  // });
   }
 }

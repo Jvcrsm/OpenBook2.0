@@ -70,6 +70,10 @@ const routes: Routes = [
   {
     path: 'post-chapter',
     loadChildren: () => import('./pages/post-chapter/post-chapter.module').then( m => m.PostChapterPageModule)
+  },
+  {
+    path: 'message',
+    loadChildren: () => import('./modals/message/message.module').then( m => m.MessagePageModule)
   }
 
 

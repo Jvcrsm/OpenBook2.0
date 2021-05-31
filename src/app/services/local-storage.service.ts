@@ -11,6 +11,9 @@ export class LocalStorageService {
     userData:any;
     canPost = false;
     bookTitle = '';
+    books:any = [];
+    to:string;
+    otherId:string;
 
     
   constructor() { }

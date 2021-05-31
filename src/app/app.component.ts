@@ -19,4 +19,9 @@ export class AppComponent {
   constructor(private storage: LocalStorageService) {
   }
 
+  chaneInfo(){
+    this.name = this.storage.userData.name;
+    this.email = this.storage.userData.email;
+  }
+
 }

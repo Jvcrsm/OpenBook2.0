@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar style="--background: #f4976c; color: white">
+    <ion-title class="ion-text-center">REPORT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h4>To: {{to}}</h4>
+
+  <ion-item class="ion-float-left">
+    <ion-label position="floating" color="primary">Letter</ion-label>
+    <ion-textarea
+      rows="5"
+      cols="70"
+      placeholder="Letter here"
+      [(ngModel)]="content"
+    ></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" color="success" shape="round"> Send </ion-button>
+</ion-content>

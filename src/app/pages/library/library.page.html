@@ -1,11 +1,6 @@
 <ion-header>
   <ion-toolbar style="--background: #19a5b4">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
       <ion-avatar><img src="../assets/logo.png" id="logo-pic" /></ion-avatar>
       <p
         style="
@@ -26,7 +21,7 @@
     ></ion-searchbar>
     <ion-buttons [routerLink]="['/diary']" slot="end">
       <ion-label style="font-weight: 400; color: white"
-        ><small>Juan Dela Cruz</small></ion-label
+        ><small>{{userName}}</small></ion-label
       >
       <ion-icon
         style="padding-left: 5px; color: white"
@@ -85,22 +80,23 @@
             <ion-label style="font-weight: 700">{{book.title}}</ion-label>
           </ion-item>
 
-          <ion-card-content
-            >{{book.summary}}
+          <ion-card-content>
+            <div
+              style="height: 120px; text-overflow: ellipsis; overflow: hidden"
+            >
+              {{book.summary}}
+            </div>
+
             <ion-button
               expand="block"
               shape="round"
-              style="
-                margin: 20px 0 20px 0;
-                --background: #f4976c;
-                margin-top: 40%;
-              "
+              style="margin: 20px 0 20px 0; --background: #f4976c"
               (click)="viewBook(book._id, book.title)"
             >
               Read
             </ion-button>
             <div>
-              <ion-badge style="margin: 10px" *ngFor="let genre of book.genre">
+              <ion-badge style="margin: 2px" *ngFor="let genre of book.genre">
                 {{genre}}</ion-badge
               >
             </div>

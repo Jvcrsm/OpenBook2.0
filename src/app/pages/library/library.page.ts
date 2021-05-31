@@ -13,6 +13,7 @@ export class LibraryPage implements OnInit {
 
   allData:any;
 
+  userName:string = "Juan Dela Cruz";
   option = {
     slidesPerView:1.5,
     centeredSlides: true,
@@ -25,13 +26,14 @@ export class LibraryPage implements OnInit {
   sample = [1,1];
   constructor(private menu: MenuController, private apiService: ApiService, private storage: LocalStorageService, private router: Router) { 
     this.storage.canPost = false;
-    
+    // this.userName = this.storage.userData.name;
   }
   
   ngOnInit() {
-    this.menu.enable(true);
     this.showBooks();
+    this.menu.enable(true);
   }
+  
 
   public showBooks(){
     let requestObject = {
@@ -45,10 +47,13 @@ export class LibraryPage implements OnInit {
   });
   }
 
+
   public getBooks(){
+    this.storage.books = [];
     this.allData.forEach((val) =>{
       val.books.forEach(book =>{
         this.books.push(book);
+        this.storage.books.push(book);
       })
     });
   }
