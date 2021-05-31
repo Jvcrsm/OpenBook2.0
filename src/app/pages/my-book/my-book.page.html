@@ -56,7 +56,7 @@
                 expand="block"
                 shape="round"
                 style="margin: 20px 0 20px 0; --background: #f4976c"
-                (click)="viewBook(book._id)"
+                (click)="viewBook(book._id, book.title)"
               >
                 Read
               </ion-button>
@@ -73,13 +73,13 @@
         </ion-row>
       </ion-grid>
     </ion-card>
-  </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button style="--background: #f4976c" (click)="addBook()">
-      <ion-icon name="add-circle-outline" class="fab-icon"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button style="--background: #f4976c" (click)="addBook()">
+        <ion-icon name="add-circle-outline" class="fab-icon"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
 
   <div *ngIf="verified == 'false'">
     <h1 class="lock-text ion-text-center">ACCOUNT NOT VERIFIED</h1>

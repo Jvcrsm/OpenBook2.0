@@ -29,12 +29,12 @@ export class DiaryPage implements OnInit {
   }
 
   
-  // ionViewWillEnter(){
-  //   this.count.chapters = this.userData.chapters.length;
-  //   this.count.books = this.userData.books.length;
-  //   this.count.notes = this.userData.posts.length;
-  //   this.verified = this.userData.verified;
-  // }
+  ionViewWillEnter(){
+    this.count.chapters = this.userData.chapters.length;
+    this.count.books = this.userData.books.length;
+    this.count.notes = this.userData.posts.length;
+    this.verified = this.userData.verified;
+  }
 
  
   async verify(){

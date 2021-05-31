@@ -12,6 +12,8 @@ import { PostBookPage } from '../post-book/post-book.page';
 })
 export class MyBookPage implements OnInit {
 
+  allData:any;
+
   verified:string = "true";
   books = [];
   chapters = [];
@@ -25,26 +27,32 @@ export class MyBookPage implements OnInit {
   }
 
   ngOnInit() {
+    this.showBooks();
   }
 
 
 
-  public viewBook(bookId){
+  public viewBook(bookId, bookTitle){
     this.storage.posts = [];
+    this.storage.bookId = bookId;
+    this.storage.bookTitle = bookTitle;
     this.storage.chapters = [];
 
-    this.chapters.forEach((val) =>{
-        if(val.bookId == bookId){
-          this.storage.chapters.push(val);
+    this.allData.forEach((val) =>{
+      val.chapters.forEach(chapter =>{
+        if(chapter.bookId == bookId){
+          this.storage.chapters.push(chapter);
         }
+      })
     });
 
-    this.posts.forEach((val) =>{
-      if(val.bookId == bookId){
-        this.storage.posts.push(val);
-      }
-  });
-   
+    this.allData.forEach((val) =>{
+      val.posts.forEach(post =>{
+        if(post.bookId == bookId){
+          this.storage.posts.push(post);
+        }
+      })
+    });
 
     this.router.navigate(['/read']);
   }
@@ -59,6 +67,17 @@ export class MyBookPage implements OnInit {
       cssClass: 'my-custom-class'
     });
     return await modal.present();
+  }
+
+  public showBooks(){
+    let requestObject = {
+      location: 'users/get-all-data',
+      method: "GET"
+  }
+
+  this.apiService.makeRequest(requestObject).then((data) => {
+    this.allData = data;
+  });
   }
 
 }

@@ -9,7 +9,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class MessagePage implements OnInit {
 
   to:string = "sample";
-  content:string = "content";
+  content:string = "";
   constructor(private storage: LocalStorageService) { 
     this.to = this.storage.to;
     console.log(this.storage.otherId);
